@@ -2,17 +2,17 @@
 #include<malloc.h>
 struct JosephList
 {
-   int number; //±àºÅ
-   int password;//ÃÜÂë
-   JosephList *next;//ºóÒ»¸ö½áµã
+   int number; //ç¼–å·
+   int password;//å¯†ç 
+   JosephList *next;//åä¸€ä¸ªç»“ç‚¹
 };
 int m,PeopleNumber;
 JosephList *p,*q,*p1;
 void Input()
 {
-    cout<<"ÊäÈëmµÄ³õÊ¼Öµ m:";
+    cout<<"è¾“å…¥mçš„åˆå§‹å€¼ m:";
     cin>>m
-    cout<<"ÊäÈëÈËÊı PeopleNumber:";
+    cout<<"è¾“å…¥äººæ•° PeopleNumber:";
     cin>>PeopleNumber;
 }
 void InputPassword()
@@ -30,16 +30,16 @@ void InputPassword()
             p->next=q;
             p=q;
         }
-        cout<<"ÊäÈëµÚ"<<i<<"¸öÈËµÄÃÜÂë: ";
+        cout<<"è¾“å…¥ç¬¬"<<i<<"ä¸ªäººçš„å¯†ç : ";
         cin>>p->password;
         p->number=i;
    }
 }
 void Output()
 {
-   p->next=p1; //ĞÎ³ÉÑ­»·ÁĞ±í
+   p->next=p1; //å½¢æˆå¾ªç¯åˆ—è¡¨
    p=p1;
-   cout<<"³öÁĞË³ĞòÎª: ";
+   cout<<"å‡ºåˆ—é¡ºåºä¸º: ";
    for ( j=1;j<=PeopleNumber;j++)
    {
         for(int i=1;i<m;i++)
@@ -59,7 +59,5 @@ int main()
     Input();
     InputPassword();
     Output();
-	cout<<"ÁõÓî·² 175051";
-	cout<<endl;
     return 0;
 }
